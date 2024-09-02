@@ -1,22 +1,269 @@
 [
   {
-    "id": "321",
-    "parameters": {
-      "models": "gpt-4o"
+    "name": "WorkFlow1",
+    "variables": {
+      "arg1": "value1",
+      "arg2": "value2"
     },
-    "activities": [
-      {
-        "name": "Task1",
-        "parameters": {
-          "models": "llama-3"
-        }
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "arg1"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "SampleActivity2",
+              "arguments": [
+                "result1"
+              ],
+              "result": "result2"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "SampleActivity3",
+              "arguments": [
+                "arg2",
+                "result2"
+              ],
+              "result": "result3"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
       },
-      {
-        "name": "Task2",
-        "parameters": {
-          "models": "claude"
-        }
-      }
-    ]
+      "parallel": null
+    }
+  },
+  {
+    "name": "WorkFlow2",
+    "variables": {
+      "arg1": "value1",
+      "arg2": "value2",
+      "arg3": "value3"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "arg1"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": null,
+            "sequence": null,
+            "parallel": {
+              "Branches": [
+                {
+                  "activity": null,
+                  "sequence": {
+                    "Elements": [
+                      {
+                        "activity": {
+                          "name": "SampleActivity2",
+                          "arguments": [
+                            "result1"
+                          ],
+                          "result": "result2"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      },
+                      {
+                        "activity": {
+                          "name": "SampleActivity3",
+                          "arguments": [
+                            "arg2",
+                            "result2"
+                          ],
+                          "result": "result3"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      }
+                    ]
+                  },
+                  "parallel": null
+                },
+                {
+                  "activity": null,
+                  "sequence": {
+                    "Elements": [
+                      {
+                        "activity": {
+                          "name": "SampleActivity4",
+                          "arguments": [
+                            "result1"
+                          ],
+                          "result": "result4"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      },
+                      {
+                        "activity": {
+                          "name": "SampleActivity5",
+                          "arguments": [
+                            "arg3",
+                            "result4"
+                          ],
+                          "result": "result5"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      }
+                    ]
+                  },
+                  "parallel": null
+                }
+              ]
+            }
+          },
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "result3",
+                "result5"
+              ],
+              "result": "result6"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
+  },
+  {
+    "name": "Dev Custom Workflow",
+    "variables": {
+      "arg1": "Dev",
+      "arg2": "Baheti",
+      "arg3": "On-Demand"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "arg1"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": null,
+            "sequence": null,
+            "parallel": {
+              "Branches": [
+                {
+                  "activity": null,
+                  "sequence": {
+                    "Elements": [
+                      {
+                        "activity": {
+                          "name": "SampleActivity2",
+                          "arguments": [
+                            "result1"
+                          ],
+                          "result": "result2"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      },
+                      {
+                        "activity": {
+                          "name": "SampleActivity3",
+                          "arguments": [
+                            "arg2",
+                            "result2"
+                          ],
+                          "result": "result3"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      }
+                    ]
+                  },
+                  "parallel": null
+                },
+                {
+                  "activity": null,
+                  "sequence": {
+                    "Elements": [
+                      {
+                        "activity": {
+                          "name": "SampleActivity4",
+                          "arguments": [
+                            "result1"
+                          ],
+                          "result": "result4"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      },
+                      {
+                        "activity": {
+                          "name": "SampleActivity5",
+                          "arguments": [
+                            "arg3",
+                            "result4"
+                          ],
+                          "result": "result5"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      }
+                    ]
+                  },
+                  "parallel": null
+                }
+              ]
+            }
+          },
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "result3",
+                "result5"
+              ],
+              "result": "result6"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
   }
 ]

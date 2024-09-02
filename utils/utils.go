@@ -7,7 +7,7 @@ import (
 
 func FindWorkflowByID(workflows []models.Workflow, id string) (*models.Workflow, error) {
 	for _, workflow := range workflows {
-		if workflow.ID == id {
+		if workflow.Name == id {
 			return &workflow, nil
 		}
 	}
