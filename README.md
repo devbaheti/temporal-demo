@@ -4,20 +4,8 @@ Steps to run this sample:
 1) Run a [Temporal service](https://github.com/temporalio/samples-go/tree/main/#how-to-use).
 2) Run
 ```
-go run dsl/worker/main.go
+go run main.go
 ```
-to start worker for dsl workflow.
-3) Run 
-```
-go run dsl/starter/main.go
-```
-to submit start request for workflow defined in `workflow1.yaml` file.
-
-Next:
-1) You can run 
-```
-go run dsl/starter/main.go -dslConfig=dsl/workflow2.yaml
-```
-to see the result.
-2) You can also write your own yaml config to play with it.
+to start worker for dsl workflow and workers.
+2) You can also write your own json config to play with it.
 3) You can replace the dummy activities to your own real activities to build real workflow based on this simple DSL workflow.
