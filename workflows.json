@@ -1,0 +1,22 @@
+[
+  {
+    "id": "321",
+    "parameters": {
+      "models": "gpt-4o"
+    },
+    "activities": [
+      {
+        "name": "Task1",
+        "parameters": {
+          "models": "llama-3"
+        }
+      },
+      {
+        "name": "Task2",
+        "parameters": {
+          "models": "claude"
+        }
+      }
+    ]
+  }
+]
