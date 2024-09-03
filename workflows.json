@@ -265,5 +265,294 @@
       },
       "parallel": null
     }
+  },
+  {
+    "name": "Dev Custom Workflow - 1",
+    "variables": {
+      "arg1": "Dev",
+      "arg2": "Baheti",
+      "arg3": "On-Demand"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "arg1"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": null,
+            "sequence": null,
+            "parallel": {
+              "Branches": [
+                {
+                  "activity": null,
+                  "sequence": {
+                    "Elements": [
+                      {
+                        "activity": {
+                          "name": "SampleActivity2",
+                          "arguments": [
+                            "result1"
+                          ],
+                          "result": "result2"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      },
+                      {
+                        "activity": {
+                          "name": "SampleActivity3",
+                          "arguments": [
+                            "arg2",
+                            "result2"
+                          ],
+                          "result": "result3"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      }
+                    ]
+                  },
+                  "parallel": null
+                },
+                {
+                  "activity": null,
+                  "sequence": {
+                    "Elements": [
+                      {
+                        "activity": {
+                          "name": "SampleActivity4",
+                          "arguments": [
+                            "result1"
+                          ],
+                          "result": "result4"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      },
+                      {
+                        "activity": {
+                          "name": "SampleActivity5",
+                          "arguments": [
+                            "arg3",
+                            "result4"
+                          ],
+                          "result": "result5"
+                        },
+                        "sequence": null,
+                        "parallel": null
+                      }
+                    ]
+                  },
+                  "parallel": null
+                }
+              ]
+            }
+          },
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "result3",
+                "result5"
+              ],
+              "result": "result6"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
+  },
+  {
+    "name": "Dev Custom Workflow - 2",
+    "variables": {
+      "url": "Dev"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "HttpBlock",
+              "arguments": [
+                "url"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "result1"
+              ],
+              "result": "result2"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
+  },
+  {
+    "name": "Dev Custom Workflow - 2",
+    "variables": {
+      "url": "Dev"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "HttpBlock",
+              "arguments": [
+                "url"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "SampleActivity1",
+              "arguments": [
+                "result1"
+              ],
+              "result": "result2"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
+  },
+  {
+    "name": "Dev Custom Workflow - 3",
+    "variables": {
+      "url": "Dev"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "HttpBlock",
+              "arguments": [
+                "url"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "ProcessChat",
+              "arguments": [
+                "result1"
+              ],
+              "result": "result2"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
+  },
+  {
+    "name": "Dev Custom Workflow - 4",
+    "variables": {
+      "url": "Dev"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "HttpBlock",
+              "arguments": [
+                "url"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "ProcessChat",
+              "arguments": [
+                "result1"
+              ],
+              "result": "result2"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
+  },
+  {
+    "name": "Dev Custom Workflow - 5",
+    "variables": {
+      "url": "Dev"
+    },
+    "root": {
+      "activity": null,
+      "sequence": {
+        "Elements": [
+          {
+            "activity": {
+              "name": "HttpBlock",
+              "arguments": [
+                "url"
+              ],
+              "result": "result1"
+            },
+            "sequence": null,
+            "parallel": null
+          },
+          {
+            "activity": {
+              "name": "ProcessChat",
+              "arguments": [
+                "result1"
+              ],
+              "result": "result2"
+            },
+            "sequence": null,
+            "parallel": null
+          }
+        ]
+      },
+      "parallel": null
+    }
   }
 ]

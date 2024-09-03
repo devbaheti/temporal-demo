@@ -137,3 +137,22 @@ func makeInput(argNames []string, argsMap map[string]string) []string {
 	}
 	return args
 }
+
+type Choice struct {
+	Message Message
+}
+
+type ChatCompletionRequest struct {
+	Model       string    `json:"model"`
+	Messages    []Message `json:"messages"`
+	Temperature float64   `json:"temperature,omitempty"`
+	TopP        float64   `json:"top_p,omitempty"`
+}
+type ChatCompletionResponse struct {
+	Choices []Choice `json:"choices"`
+}
+
+type Message struct {
+	Role    string `json:"role,omitempty"`
+	Content string `json:"content,omitempty"`
+}
